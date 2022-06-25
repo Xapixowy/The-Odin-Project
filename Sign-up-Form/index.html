@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="css/styles.css" />
+      <title>Sign-up Form</title>
+   </head>
+   <body>
+      <aside>
+         <div id="header">
+            <img src="./assets/images/logo.png" alt="" />
+         </div>
+         <p>Photo from <a href="https://wallpaperaccess.com/">WallpaperAccess</a></p>
+      </aside>
+      <main>
+         <div id="disclaimer">
+            <h2>
+               This is not a real online service! You know you need something like this in your life to help you realize
+               your deepest dreams.<br />
+               Sign up <i>now</i> to get started.
+            </h2>
+            <h2>You <i>know</i> you want to.</h2>
+         </div>
+         <form>
+            <div id="form">
+               <h2>Let's do this!</h2>
+               <label for="firstName"
+                  >First name
+                  <input
+                     type="text"
+                     id="firstName"
+                     name="firstName"
+                     placeholder="Emily"
+                     title="Enter you first name here"
+                     minlength="3"
+                  />
+               </label>
+               <label for="lastName"
+                  >Last name
+                  <input
+                     type="text"
+                     id="lastName"
+                     name="lastName"
+                     placeholder="Carter"
+                     title="Enter your last name here"
+                     minlength="3"
+                  />
+               </label>
+               <label for="email"
+                  >Email
+                  <input
+                     type="email"
+                     id="email"
+                     name="email"
+                     placeholder="emilycarter@example.com"
+                     title="Enter you email here"
+                  />
+               </label>
+               <label for="phoneNumber"
+                  >Phone number
+                  <input
+                     type="text"
+                     id="phoneNumber"
+                     name="phoneNumber"
+                     pattern="[\d]{3}-[\d]{3}-[\d]{3}"
+                     placeholder="123-456-789"
+                     title="Enter your phone number here"
+                  />
+               </label>
+               <label for="password"
+                  >Password
+                  <input
+                     type="password"
+                     id="password"
+                     name="password"
+                     title="Enter you password here"
+                     minlength="8"
+                     maxlength="20"
+                  />
+               </label>
+               <label for="confirmPassword"
+                  >Confirm password
+                  <input
+                     type="text"
+                     id="confirmPassword"
+                     name="confirmPassword"
+                     title="Enter you password here again (both passwords must match)"
+                     minlength="8"
+                     maxlength="20"
+                  />
+               </label>
+            </div>
+            <button>Create Account</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+         </form>
+      </main>
+      <script src="js/scripts.js"></script>
+   </body>
+</html>
