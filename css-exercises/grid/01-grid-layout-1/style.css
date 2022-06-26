@@ -49,9 +49,14 @@ html {
 
 /* SOLUTION */
 
+body {
+   display: flex;
+   justify-content: center;
+}
+
 .container {
    display: grid;
-   grid-template: 100px 100px 1fr 100px / 1fr 1fr 1fr 1fr;
+   grid-template: 100px 100px 700px 100px / repeat(4, 200px);
    gap: 15px;
 }
 
