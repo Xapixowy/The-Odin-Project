@@ -183,7 +183,12 @@ main
       overflow-y: scroll
       scrollbar-color: var(--accent-color) var(--background2-color)
       scrollbar-width: thin
-      
+      &::-webkit-scrollbar
+         width: 7px
+      &::-webkit-scrollbar-track
+         background-color: var(--background2-color)
+      &::-webkit-scrollbar-thumb
+         background-color: var(--accent-color)
       h2
          grid-area: 1 / 1 / 2 / 2
       div.project
