@@ -1,0 +1,152 @@
+*
+   margin: 0
+   padding: 0
+   box-sizing: border-box
+:root
+   --accent-color: #FCD34D
+   --background-color: #FAFAFA
+   --background2-color: #E4E4E7
+   --font-color: #18181B
+body
+   height: 100vh
+   display: grid
+   grid-template: 100px 1fr 50px / 1fr
+   background-color: var(--background2-color)
+   font-family: 'Finlandica', sans-serif
+header
+   grid-row: 1 / 2
+   padding: 10px
+   display: flex
+   align-items: center
+   justify-content: space-between
+   background-color: var(--background-color)
+   box-shadow: 0 -5px 10px var(--font-color)
+   div.logo
+      font-size: 3em
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      color: var(--font-color)
+   nav
+      ul
+         list-style-type: none
+         display: flex
+         justify-content: center
+         align-items: center
+         gap: 15px
+div#add-new-book
+   width: clamp(250px,50%, 450px)
+   padding: 10px
+   border: 2px solid var(--font-color)
+   border-radius: 15px
+   position: fixed
+   top: 50%
+   left: 50%
+   transform: translate(-100vw,-50%)
+   background-color: var(--background-color)
+   box-shadow: 1px 1px 5px -2px var(--font-color)
+   z-index: 999
+   h2
+      padding-bottom: 2px
+      margin-bottom: 15px
+      border-bottom: 1px solid var(--font-color)
+   form
+      display: flex
+      flex-direction: column
+      gap: 12px
+      label
+         display: flex
+         align-items: center
+         input
+            padding: 3px
+            margin-left: 5px
+            border: 1px solid var(--font-color)
+            border-radius: 2px
+            flex-grow: 1
+            transition: border .1s, background-color .1s, color .1s
+            &[type="text"]:focus, &[type="number"]:focus
+               border: 1px solid var(--font-color)
+               outline: none
+               background-color: var(--font-color)
+               color: var(--background-color)
+            &[type="range"]
+               -webkit-appearance: none
+               width: 200px
+               height: 5px
+               padding: 0
+               border-radius: 100vh
+               background-color: var(--font-color)
+            @mixin slider-thumb
+               -webkit-appearance: none
+               width: 15px
+               height: 15px
+               margin: 0
+               padding: 0
+               box-sizing: border-box
+               border: 2px solid var(--font-color)
+               border-radius: 100%
+               background-color: var(--accent-color)
+               cursor: ew-resize
+            &[type="range"]::-webkit-slider-thumb
+               @include slider-thumb
+            &[type="range"]::-moz-range-thumb
+               @include slider-thumb
+         span.value
+            margin-left: 10px
+button, nav > ul > li
+   align-self: center
+   width: fit-content
+   padding: 5px 15px
+   border: 2px solid var(--font-color)
+   border-radius: 100vh
+   position: relative
+   color: var(--background-color)
+   overflow: hidden
+   cursor: pointer
+   transition: border-color .2s, color .1s .05s
+   box-shadow: 0 0px 5px var(--font-color)  
+   &::before, &::after
+      content: ''
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      transform: translateY(0)
+      background-color: var(--font-color)
+      transition: transform .2s
+   &::after
+      transform: translateY(100%)
+      background-color: var(--accent-color)
+   span
+      position: relative
+      z-index: 1
+   &:hover
+      border-color: var(--accent-color)
+      color: var(--font-color)
+      &::before
+         transform: translateY(-100%)
+      &::after
+         transform: translateY(0)
+   &.clicked
+      border-color: var(--accent-color)
+      color: var(--font-color)
+      &::before, &::after
+         background-color: var(--accent-color)
+      &::after
+         background-color: var(--font-color)
+   &.clicked:hover
+      border-color: var(--font-color)
+      color: var(--background-color) 
+main
+   width: 100%
+   height: calc(100vh - 100px - 50px)
+   position: absolute
+   top: 100px
+   left: 0
+   grid-row: 2 / 3
+   &#my-books
+      transform: translateX(-100vw)
+footer
+   grid-row: 3 / 4

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Library</title>
+      <!-- Font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Finlandica:wght@400;700&display=swap" rel="stylesheet" />
+      <!-- Icons -->
+      <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" />
+      <!-- CSS -->
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <header>
+         <div class="logo">
+            <i class="mdi mdi-book-multiple"></i>Library
+         </div>
+         <nav>
+            <ul>
+               <li><span>My Books</span></li>
+               <li><span>Add Book</span></li>
+            </ul>
+         </nav>
+      </header>
+      <div id="add-new-book">
+         <h2>Add new book</h2>
+         <form>
+            <label for="book-title">
+               Title:
+               <input type="text" id="book-title" name="book-title" placeholder="The Lord of the Rings" />
+            </label>
+            <label for="book-author">
+               Author:
+               <input type="text" id="book-author" name="book-author" placeholder="J. R. R. Tolkien" />
+            </label>
+            <label for="book-cover">
+               Cover URL:
+               <input type="text" id="book-cover" name="book-cover" />
+            </label>
+            <label for="book-pages">
+               Pages:
+               <input type="number" id="book-pages" name="book-pages" min="1" placeholder="1178" />
+            </label>
+            <label for="book-rating">
+               Rating:
+               <input type="range" id="book-rating" name="book-rating" min="0" max="10" step="1" />
+               <span class="value">5</span>
+            </label>
+            <button><span>Add book</span></button>
+         </form>
+      </div>
+      <main id="library">
+         <div class="book">
+            <h2 class="book-title">The Lord of the Rings</h2>
+            <h3 class="book-author">J. R. R. Tolkien</h3>
+            <img
+               class="book-photo"
+               src="https://images-na.ssl-images-amazon.com/images/I/51kfFS5-fnL._SX332_BO1,204,203,200_.jpg"
+               alt="The Lord of the Rings cover photo"
+            />
+            <p class="book-pages">Pages: <span>1178</span></p>
+            <p class="rating">
+               <p>Rating: </p>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+            </p>
+            <button><span>Add book</span></button>
+         </div>
+      </main>
+      <main id="my-books">
+         <div class="book">
+            <h2 class="book-title">The Hobbit</h2>
+            <h3 class="book-author">J. R. R. Tolkien</h3>
+            <img
+               class="book-photo"
+               src="https://ecsmedia.pl/c/the-hobbit-w-iext47857921.jpg"
+               alt="The Hobbit cover photo"
+            />
+            <p class="book-pages">Pages: <span>368</span></p>
+            <p class="rating">
+               <p>Rating: </p>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+               <i class="mdi mdi-star-circle"></i>
+            </p>
+            <button><span>Remove book</span></button>
+         </div>
+      </main>
+      <footer>Xapixowy &copy 2022</footer>
+      <script src="script.js"></script>
+   </body>
+</html>
